@@ -1,0 +1,417 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>modetour-cyj</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="script.js"></script>
+
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <!-- 폰트어썸 불러오기 -->
+    <script src="https://kit.fontawesome.com/eafd0a4e2d.js" crossorigin="anonymous"></script>
+
+    <!-- slick 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+
+
+
+</head>
+
+<!-- 헤더 -->
+
+
+<body>
+
+    <main>
+
+        <header>
+
+
+
+
+            <div class="m-header">
+                <a href="#" class="logo img-box block">
+                    <img src="https://www.modetour.com/images/defaultLogo.png" alt="logo">
+                </a>
+                <a href="#" class="search img-box block">
+                    <img src="https://www.goldonehotel.com/theme/responsive_goldonehotel/include/img/header_r_icon.svg"
+                        alt="search">
+                </a>
+                <div class="m-menu-btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <p class="m-menu-txt">MENU</p>
+
+                <div class="mobile-mask"></div>
+
+                <div class="m-menu-list">
+
+
+
+                    <ul>
+
+                        <li class="m-menu-close-btn" onclick="모바일메뉴닫기()"><img
+                                src="https://www.goldonehotel.com/theme/responsive_goldonehotel/include/img/close.svg">
+                        </li>
+
+
+                        <li class="list-icon"><img src="https://static.thenounproject.com/png/642902-200.png">
+                            <a href="#">
+                                <p><span>로그인</span>
+                            </a>하고<br>
+                            더 많은 혜택을 확인하세요</p>
+                        </li>
+
+
+
+                        <li class="delay-1">
+                            <a href="#">PRODUCT</a>
+                        </li>
+                        <li class="delay-2 delay-d">
+                            <a href="#"><span class="list-span">RESERVATION</span></a>
+                        </li>
+                        <li class="delay-2">
+                            <a href="#">BOARD</a>
+                        </li>
+                        <li class="delay-2">
+                            <a href="#"><span class="list-span">QNA</span></a>
+                        </li>
+                        <li class="delay-3">
+                            <a href="#"><span class="list-span">FAQ</span></a>
+                        </li>
+                        <li class="delay-4 delay-d">
+                            <a href="#"><span class="list-span">EVENT</span></a>
+                        </li>
+
+                        <li class="delay-4">
+                            <a href="#">ACCOUNT</a>
+                        </li>
+                        <li class="delay-5">
+                            <a href="#"><span class="list-span">LOGIN</span></a>
+                        </li>
+                        <li class="delay-5">
+                            <a href="#"><span class="list-span">JOINUS</span></a>
+                        </li>
+                        <li class="delay-5">
+                            <a href="#"><span class="list-span">REMOVE</span></a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-fonticon">
+                        <li><a href="#"><i class="fa-regular fa-circle-user"></i></a></li>
+                        <li><a href="#"><i class="fa-regular fa-bell"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-headset"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-globe"></i></a></li>
+                    </ul>
+
+                    <ul class="list-b">
+                        <li>
+                            <a></a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="m-search-on">
+                    <div class="m-search-box">
+                        <input type="search" placeholder="Decor 제품 검색">
+                        <a href="#" class="img-box block"><img
+                                src="https://www.goldonehotel.com/theme/responsive_goldonehotel/include/img/header_r_icon.svg"
+                                alt="search"></a>
+                    </div>
+                    <div class="m-recommend-word">
+                        <p><a href="#" class="block">추천 검색어</a></p>
+                        <ul>
+                            <li><a href="#" class="block delay-1">앙상블 냉장고</a></li>
+                            <li><a href="#" class="block delay-2">오븐 (136L)</a></li>
+                            <li><a href="#" class="block delay-3">인덕션</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+
+
+
+        <!-- 헤더 -->
+
+
+        <script>
+            // 모바일 메뉴 버튼
+            $('.m-header > .m-menu-btn').click(function () {
+                if ($(this).hasClass('active')) {
+                    $('html').removeClass('m-menu-scroll');
+
+                    $(this).removeClass('active');
+                    $(this).siblings('.mobile-mask').css('height', '');
+                    $(this).siblings('.m-menu-list').removeClass('active');
+                }
+                else {
+                    $('html').addClass('m-menu-scroll');
+
+                    $('.m-header > .search > img').attr('src', 'https://www.goldonehotel.com/theme/responsive_goldonehotel/include/img/header_r_icon.svg');
+                    $('.m-header > .m-search-on').removeClass('active');
+
+                    $(this).siblings('.m-menu-list').find(' > ul > li.active').removeClass('active');
+                    $(this).siblings('.m-menu-list').find(' > ul > li > ul').slideUp(0);
+
+                    $(this).addClass('active');
+                    $(this).siblings('.mobile-mask').css('height', '100%');
+                    $(this).siblings('.m-menu-list').addClass('active');
+                };
+            })
+
+
+
+
+
+            // 모바일 서치 온
+            $('.m-header > .search').click(function () {
+                if ($('.m-header > .m-search-on').hasClass('active')) {
+                    $('html').removeClass('m-menu-scroll');
+
+                    $(this).find(' > img').attr('src', 'https://www.goldonehotel.com/theme/responsive_goldonehotel/include/img/header_r_icon.svg');
+                    $(this).siblings('.mobile-mask').css('height', '');
+                    $('.m-header > .m-search-on').removeClass('active');
+                }
+                else {
+                    $('html').addClass('m-menu-scroll');
+
+                    $('.m-header > .m-menu-btn').removeClass('active');
+                    $(this).siblings('.m-menu-list').removeClass('active');
+
+                    $(this).find(' > img').attr('src', 'https://www.dacorkorea.com/images/icon-search-close.png');
+                    $(this).siblings('.mobile-mask').css('height', '100%');
+                    $('.m-header > .m-search-on').addClass('active');
+                }
+            });
+
+        </script>
+
+
+
+        <!--헤더 스크롤 이벤트 -->
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+                var header = document.querySelector('.m-header');
+                var searchIcon = document.querySelector('.search img');
+                var menuTxt = document.querySelector('.m-menu-txt');
+                var menuBtnDivs = document.querySelectorAll('.m-menu-btn div');
+                var scrollThreshold = 50;
+
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > scrollThreshold) {
+                        // 스크롤 되었을 때
+                        header.classList.add('scrolled');
+                        menuTxt.style.color = '#6d6d6d';
+
+                        menuBtnDivs.forEach(function (div) {
+                            div.style.backgroundColor = '#6d6d6d';
+                        });
+
+                        // 이미지를 새로운 이미지로 교체
+                        searchIcon.src = 'https://www.goldonehotel.com/theme/responsive_goldonehotel/include/img/header_r_icon_on.svg';
+                    } else {
+                        // 스크롤 되기 전
+                        header.classList.remove('scrolled');
+                        menuTxt.style.color = 'white';
+                        menuTxt.style.backgroundColor = 'initial';
+
+                        menuBtnDivs.forEach(function (div) {
+                            div.style.backgroundColor = 'white';
+                        });
+
+                        // 이미지를 초기 이미지로 교체
+                        searchIcon.src = 'https://www.goldonehotel.com/theme/responsive_goldonehotel/include/img/header_r_icon.svg';
+                    }
+                });
+            });
+        </script>
+
+        <!--헤더 모바일메뉴닫기-->
+
+        <script>
+            function 모바일메뉴닫기() {
+                // 메뉴 버튼 및 메뉴 리스트에서 active 클래스 제거
+                document.querySelector('.m-menu-btn').classList.remove('active');
+                document.querySelector('.mobile-mask').style.height = '';
+                document.querySelector('.m-menu-list').classList.remove('active');
+            }
+        </script>
+
+        <!--메인 슬라이드 시작-->
+
+
+        <div class="slide-wrap" data-autoplay="Y">
+
+            <div class="main-visual">
+
+                <div class="slide-item">
+                    
+                    <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="./image/main-slide-maldives.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="item-text">
+                        <h2>푸른 바다와 함께!<br><span class="maldives-text">몰디브 할인특별전</span></h2>
+                        <p>미리 준비할수록 할인이 더 커져요!
+                            <br>~3/20일까지
+                        </p>
+                    </div>
+
+                    <div class="item-gauge">
+                        <span class="gauge-fill"></span>
+                    </div>
+                    
+                </div>
+
+                <div class="slide-item">
+                    <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="./image/main-slide-vietnam.mp4">
+                    </video>
+                    <div class="item-text">
+                        <h2><span class="vietnam-text">안녕! 베트남!</span><br>아시아나항공 4,5월 출발</h2>
+                        <p>단 7회 한정, 100% 출발확정!</p>
+                    </div>
+                    <div class="item-gauge">
+                        <span class="gauge-fill"></span>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="./image/main-slide-thailand.mp4">
+                    </video>
+                    <div class="item-text">
+                        <h2>모두투어와 함께 떠나는<br><span class="thailand-text">힐링 태국여행</span></h2>
+                        <p>NO팁 NO옵션!<br>
+                            품격있는 태국여행!</p>
+                    </div>
+                    <div class="item-gauge">
+                        <span class="gauge-fill"></span>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="./image/main-slide-china.mp4">
+                    </video>
+                    <div class="item-text">
+                        <h2>선착순 특가 대방출<br><span class="china-text">모두투어와 중국가자!</span></h2>
+                        <p>오직 모두투어에서만 만날 수 있는
+                            <br>두근두근 중국여행 특가</p>
+                    </div>
+                    <div class="item-gauge">
+                        <span class="gauge-fill"></span>
+                    </div>
+                </div>
+
+                <div class="slide-item">
+                    <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="./image/main-slide-japan.mp4">
+                    </video>
+                    <div class="item-text">
+                        <h2>조금 더 특별한
+                            <br><span class="japan-text">일본에 갈까요?</span></h2>
+                        <p>배부른 힐링,
+                            매일 매일이 새로운 일본</p>
+                    </div>
+                    <div class="item-gauge">
+                        <span class="gauge-fill"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 슬라이드 네비게이션 버튼 -->
+            <div class="slide-nav">
+
+                <button class="custom-prev-button" type="button"><img
+                        src="https://www.mayfield.co.kr/assets/images/slide_arr_green_l.png"></button>
+                <button class="custom-next-button" type="button"><img
+                        src="https://www.mayfield.co.kr/assets/images/slide_arr_green_r.png"></button>
+            </div>
+
+            <button class="autoplay-btn">
+        </div>
+        </div>
+
+        <!--메인 슬라이드 -->
+        <script>
+            $(function () {
+                var slideWrap = $('.slide-wrap');
+                var slide = $('.main-visual');
+                var autoplayButton = $('.autoplay-btn');
+                var videos = $('.main-visual .slide-item video');
+
+                slide.slick({
+                    slidesToShow: 1,
+                    speed: 600,
+                    dots: false,
+                    navigator: false,
+                });
+
+                // 비디오가 끝나면 재생 완료 이벤트를 감지하여 역재생 후 다시 재생
+                videos.on('ended', function () {
+                    this.currentTime = 0;
+                    this.play();
+                });
+
+                // 왼쪽으로 넘기는 버튼에 대한 이벤트 추가
+                $('.custom-prev-button').on('click', function () {
+                    slide.slick('slickPrev');
+                });
+
+                // 오른쪽으로 넘기는 버튼에 대한 이벤트 추가
+                $('.custom-next-button').on('click', function () {
+                    slide.slick('slickNext');
+                });
+
+                autoplayButton.on('click', function () {
+                    var autoplay = slideWrap.attr('data-autoplay');
+                    if (autoplay === 'Y') {
+                        slideWrap.attr('data-autoplay', 'N');
+                    } else if (autoplay === 'N') {
+                        slideWrap.attr('data-autoplay', 'Y');
+                    }
+                });
+
+                setInterval(function () {
+                    if (slideWrap.attr('data-autoplay') !== 'N') {
+                        var gaugeWidth = slide.find('.slick-active .item-gauge').width();
+                        var fillWidth = slide.find('.slick-active .gauge-fill').width();
+                        console.log(gaugeWidth, fillWidth);
+                        if (gaugeWidth === fillWidth) {
+                            console.log("!!");
+                            slide.slick('slickNext');
+                        }
+                    }
+                }, 500);
+            });
+
+        </script>
+
+
+
+    </main>
+
+    <footer>
+
+
+    </footer>
+
+
+</body>

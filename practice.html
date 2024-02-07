@@ -1,0 +1,221 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>3차 아코디언 메뉴</title>
+</head>
+<body>
+
+  <h3 id="menuTitle">메뉴를 선택하면 '글씨'가 바뀝니다.</h3>
+  <div class="menu-accordion">
+    <div class="menu-accordion-item">
+      <div class="menu-accordion-header">메뉴 1</div>
+      <div class="menu-accordion-content">
+        <div class="submenu-accordion sub-accordion-menu-1">
+          <div class="submenu-accordion-item">
+            <div class="submenu-accordion-header">서브메뉴 1-1</div>
+            <div class="submenu-accordion-content">
+              <p onclick="changeText(this.innerText)">서브메뉴 1-1의 내용이 여기에 들어갑니다. 넉넉한 크기로 표시됩니다.</p>
+            </div>
+          </div>
+          <div class="submenu-accordion-item">
+            <div class="submenu-accordion-header">서브메뉴 1-2</div>
+            <div class="submenu-accordion-content">
+              <p onclick="changeText(this.innerText)">서브메뉴 1-2의 내용이 여기에 들어갑니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-accordion-item">
+      <div class="menu-accordion-header">메뉴 2</div>
+      <div class="menu-accordion-content">
+        <div class="submenu-accordion">
+          <div class="submenu-accordion-item">
+            <div class="submenu-accordion-header">서브메뉴 2-1</div>
+            <div class="submenu-accordion-content">
+              <p onclick="changeText(this.innerText)">서브메뉴 2-1의 내용이 여기에 들어갑니다.</p>
+            </div>
+          </div>
+          <div class="submenu-accordion-item">
+            <div class="submenu-accordion-header">서브메뉴 2-2</div>
+            <div class="submenu-accordion-content">
+              <p onclick="changeText(this.innerText)">서브메뉴 2-2의 내용이 여기에 들어갑니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function changeText(newText) {
+      document.getElementById('menuTitle').innerText = newText;
+    }
+  </script>
+</body>
+</html>
+
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-accordion {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.menu-accordion-item {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.menu-accordion-header {
+  padding: 10px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.menu-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.additional-content {
+  padding: 10px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.submenu-accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu-accordion-item {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.submenu-accordion-header {
+  padding: 10px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.submenu-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  position: relative;
+}
+
+.submenu-accordion-item.active .submenu-accordion-content {
+  max-height: 100vh;
+}
+
+.submenu-accordion.sub-accordion-menu-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu-accordion.sub-accordion-menu-1 .submenu-accordion-item {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.submenu-accordion.sub-accordion-menu-1 .submenu-accordion-header {
+  padding: 10px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.submenu-accordion.sub-accordion-menu-1 .submenu-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  position: relative;
+}
+
+.submenu-accordion.sub-accordion-menu-1 .submenu-accordion-item.active .submenu-accordion-content {
+  max-height: 100%;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const accordionContainers = document.querySelectorAll('.menu-accordion');
+
+  accordionContainers.forEach(accordionContainer => {
+    const accordionHeaders = accordionContainer.querySelectorAll('.menu-accordion-header');
+    const subAccordionHeaders = accordionContainer.querySelectorAll('.submenu-accordion-header');
+    const additionalContents = accordionContainer.querySelectorAll('.additional-content');
+    const subAccordionMenu1 = accordionContainer.querySelector('.submenu-accordion.sub-accordion-menu-1');
+
+    function toggleAccordion(item, content, siblings) {
+      item.classList.toggle('active');
+      const isOpen = item.classList.contains('active');
+
+      content.style.maxHeight = isOpen ? content.scrollHeight + 'px' : 0;
+
+      if (isOpen) {
+        siblings.forEach(sibling => {
+          if (sibling !== item) {
+            sibling.classList.remove('active');
+            sibling.querySelector('.menu-accordion-content').style.maxHeight = 0;
+          }
+        });
+      }
+    }
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const accordionItem = header.parentElement;
+        const accordionContent = accordionItem.querySelector('.menu-accordion-content');
+        const otherAccordionItems = Array.from(accordionContainer.querySelectorAll('.menu-accordion-item')).filter(item => item !== accordionItem);
+
+        toggleAccordion(accordionItem, accordionContent, otherAccordionItems);
+
+        const otherAccordionContainers = Array.from(document.querySelectorAll('.menu-accordion')).filter(container => container !== accordionContainer);
+        otherAccordionContainers.forEach(container => {
+          const otherAccordionItems = Array.from(container.querySelectorAll('.menu-accordion-item'));
+          otherAccordionItems.forEach(item => {
+            item.classList.remove('active');
+            item.querySelector('.menu-accordion-content').style.maxHeight = 0;
+          });
+        });
+      });
+    });
+
+    subAccordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const subAccordionItem = header.parentElement;
+        const subAccordionContent = subAccordionItem.querySelector('.submenu-accordion-content');
+        const otherSubAccordionItems = Array.from(accordionContainer.querySelectorAll('.submenu-accordion-item')).filter(item => item !== subAccordionItem);
+
+        toggleAccordion(subAccordionItem, subAccordionContent, otherSubAccordionItems);
+      });
+    });
+
+    additionalContents.forEach(additionalContent => {
+      additionalContent.addEventListener('click', () => {
+        toggleAccordion(subAccordionMenu1, subAccordionMenu1, []);
+      });
+    });
+  });
+});
+</script>
