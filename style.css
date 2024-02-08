@@ -55,6 +55,8 @@ video {
 }
 
 body {
+    width: 100%;
+    overflow-x: hidden;
     font-size: 0.9rem;
     line-height: 1rem;
     letter-spacing: 0.1px;
@@ -222,7 +224,7 @@ a {
 
 
 body {
-    height: 6000px;
+    height: 2000px;
 }
 
 
@@ -586,12 +588,13 @@ button {
     box-sizing: border-box;
 }
 
-/* 커스텀 */
-/* 메인 슬라이더 */
+
+
+/* 메인 슬라이드 */
 
 .slide-wrap {
     width: 100%;
-    height: calc(100vh);
+    height: calc(100vh- 83px);
     position: relative;
 
 }
