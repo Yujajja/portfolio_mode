@@ -56,13 +56,12 @@ body {
     word-break: keep-all;
     font-family: 'Pretendard-Regular';
     color: rgb(29, 29, 29);
-    
     width: 100%;
     overflow-x: hidden;
     font-size: 0.9rem;
     line-height: 1rem;
     letter-spacing: 0.1px;
-    height: 10000px;
+   
 }
 
 a {
@@ -169,8 +168,9 @@ a {
     color: #009c75;
 }
 
-.navy {
-    color: rgb(0, 41, 101);
+.gray {
+    color: rgb(148, 148, 148);
+    font-size: 1.1em;
 }
 
 .center {
@@ -276,7 +276,6 @@ html.m-menu-scroll>body {
     z-index: 11;
     border-bottom: 1px solid rgba(255, 255, 255, 0.356);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
 .m-header.scrolled {
@@ -291,6 +290,7 @@ html.m-menu-scroll>body {
     width: 160px;
     display: inline-block;
     padding-top: 8px;
+ 
 }
 
 
@@ -390,7 +390,7 @@ html.m-menu-scroll>body {
     padding: 3px 8px;
     margin-right: 2px;
     margin-left: -2px;
-    
+
 }
 
 .list-icon p {
@@ -522,7 +522,7 @@ html.m-menu-scroll>body {
     width: 100%;
     padding: 0 5%;
     z-index: 1;
-  
+
 }
 
 .list-banner img {
@@ -597,7 +597,7 @@ html.m-menu-scroll>body {
 .m-search-box>:first-child {
     width: 100%;
     display: flex;
-   
+
     align-items: center;
     margin-top: 5px;
     margin-bottom: 50px;
@@ -926,7 +926,8 @@ html.m-menu-scroll>body {
     color: var(--blue);
 }
 
-.calendar-wrap .cal_wrap .checkIn span, .calendar-wrap .cal_wrap .checkOut span {
+.calendar-wrap .cal_wrap .checkIn span,
+.calendar-wrap .cal_wrap .checkOut span {
     color: #fff;
     background-color: #009c75d8;
     border-radius: 50%;
@@ -1089,9 +1090,9 @@ html.m-menu-scroll>body {
 }
 
 @media screen and (max-width:800px) {
-.calendar-wrap {
-    margin-top: 20px;
-}
+    .calendar-wrap {
+        margin-top: 20px;
+    }
 
     .calendar-middle-wrap {
         width: 100%;
@@ -1266,7 +1267,7 @@ button {
     margin-bottom: 30px;
     line-height: 1.5em;
     font-weight: 400;
- 
+
 }
 
 
@@ -1366,7 +1367,7 @@ button {
     margin-top: 80px;
     width: 100%;
     position: relative;
-    
+
 }
 
 .best-p {
@@ -1381,7 +1382,8 @@ button {
     width: 100%;
     height: 280px;
     z-index: -1;
-    top: -50%;
+    top: -12%;
+
 }
 
 .mode-best-b img {
@@ -1403,87 +1405,87 @@ button {
 
 .mode-best-slide {
     width: 100%;
-  height: 450px;
-  position: relative;
-  }
+    height: 450px;
+    position: relative;
+}
 
-  @media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
 
     .mode-best-slide {
         height: 500px;
     }
-  }
+}
 
-  .mode-best-slide .b-slide {
+.mode-best-slide .b-slide {
     text-align: center;
     padding: 20px;
     background: #eee;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+}
 
-  .custom-arrow {
+.custom-arrow {
     margin-top: 230px;
     cursor: pointer;
     position: absolute;
     z-index: 11;
     top: 0%;
     right: 6%;
-  }
+}
 
-  .custom-arrow img {
+.custom-arrow img {
     width: 35px;
 
-  }
-  .best-prev {
+}
+
+.best-prev {
     margin-right: 55px;
 
-  }
-  .best-next {
-    
-  }
+}
 
-  .slick-prev,
-  .slick-next {
+.best-next {}
+
+.slick-prev,
+.slick-next {
     display: none !important;
-  }
+}
 
-  .best-slide {
+.best-slide {
     overflow: hidden;
-  }
+}
 
-  .best-slide img {
+.best-slide img {
     width: 100%;
     border-radius: 30px 30px 0 0;
     transition: 0.3s;
-  }
+}
 
- 
-  .best-slide-t {
+
+.best-slide-t {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: end;
-  }
+}
 
-  .best-slide-t p {
+.best-slide-t p {
     font-weight: 800;
     color: #009c75;
-  }
+}
 
-  .best-slide-t>:nth-child(2) h5 {
+.best-slide-t>:nth-child(2) h5 {
     text-align: right;
-    
-  }
 
-  .best-slide-t>:nth-child(2) h5 span {
+}
+
+.best-slide-t>:nth-child(2) h5 span {
     font-size: 1.5em;
     margin-right: 2px;
-  }
+}
 
-  @media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
     .mode-best-slide .best-slide {
-       padding-right: 10px;
+        padding-right: 10px;
     }
 
     .mode-best-slide>:last-child {
@@ -1493,7 +1495,7 @@ button {
 
 @media screen and (min-width: 800px) {
     .mode-best-slide .best-slide {
-       padding-right: 20px;
+        padding-right: 20px;
     }
 
     .mode-best-slide>:last-child {
@@ -1501,45 +1503,31 @@ button {
     }
 }
 
-  /* 미니 배너 */
+/* 미니 배너 */
 
-  .mode-minibanner {
+.mode-minibanner {
     width: 100%;
     padding: 0 5%;
-  }
+}
 
-  .mode-minibanner div {
+.mode-minibanner div {
     display: flex;
     justify-content: space-between;
-  }
+}
 
-  .mode-minibanner img {
+.mode-minibanner img {
     width: 24%;
-  }
+}
 
-  @media screen and (min-width: 600px) {
-    
+@media screen and (min-width: 600px) {
+
 
     .mode-minibanner {
         display: none;
     }
 }
 
- 
-  /* 배너 banner 01 
-          
-  .b01-slider {
-      width: 100%;
-      height: 150px;
-      padding: 0 5%;
-      overflow: hidden;
-  }
-  
-  .b01-slider img {
-      width: 100%;
-  }
-  
-  */
+
 
 /* 타임 아티클 */
 
@@ -1563,15 +1551,15 @@ button {
     background-color: rgb(51, 51, 51);
     border-radius: 30px;
     margin: 30px 0;
-  }
-  
-  .time-count {
+}
+
+.time-count {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .co {
+}
+
+.co {
     display: inline-block;
     align-items: center;
     font-size: 1.5em;
@@ -1579,80 +1567,355 @@ button {
     padding: 20px 5px;
     text-shadow: 2px 2px 5px #009c753d;
 
-  }
+}
 
-  .co span {
+.co span {
     font-weight: 800;
-   color: #009c75;
-  }
+    color: #009c75;
+}
 
-  .time-count img {
+.time-count img {
     width: 25px;
     margin-right: 5px;
-  }
+}
 
-  /* 타임 메인 슬라이드 */
+/* 타임 메인 슬라이드 */
 
-  .time-main {
+.time-main {
     width: 100%;
     display: block;
     margin: 0 auto;
-    height: 450px;    
-  }
+    height: 450px;
+    margin-bottom: 100px;
+}
 
-  .time-main h3, .time-main .t-small {
+.time-main h3,
+.time-main .t-small {
     position: relative;
     text-align: center;
-  }
+}
 
- 
-  
-  .t-slider-nav {
-    z-index: 99;
-  }
 
-  .t-slider-nav img {
+
+.t-slider-nav {
+    z-index: 11;
+}
+
+.t-slider-nav img {
     width: 100%;
     padding: 3%;
 
-  }
+}
 
-  .t-small img {
+.t-small img {
     width: 100%;
     border-radius: 30px 30px 0 0;
 
-  }
+}
 
-  
-  .time-slide-t {
+
+.time-slide-t {
     margin-top: 20px;
     display: flex;
     width: 100%;
     flex-direction: column;
     text-align: left;
-  }
+}
 
-  .time-slide-t div {
+.time-slide-t div {
     margin: 10px 0;
-  }
-  
+}
 
-  .time-slide-t p {
+
+.time-slide-t p {
     color: rgb(156, 156, 156);
-  }
+}
 
 
-  .time-slide-t>:nth-child(2) h5 span {
+.time-slide-t>:nth-child(2) h5 span {
     font-size: 1.5em;
     margin: 0 5px;
 
-  }
+}
 
-  
-  @media screen and (min-width: 600px) {
+
+@media screen and (min-width: 600px) {
 
     .t-small {
         display: inline-flex;
         height: 300px;
     }
-  }
+}
+
+/* 배너 banner 01  */
+
+.b01-slider {
+    width: 100%;
+    height: 200px;
+    padding: 0 5%;
+    overflow: hidden;
+    margin-top: 150px;
+}
+
+.b01-slider img {
+    width: 100%;
+}
+
+/* mode best 02 */
+
+
+
+.custom-arrow02 {
+    margin-top: 230px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 11;
+    top: -41%;
+    right: 6%;
+}
+
+
+.custom-arrow02 img {
+    width: 35px;
+
+}
+
+.best02-p {
+    width: 100%;
+    height: 300px;
+}
+
+/* mode video */
+
+.mode-playvideo {
+    width: 100%;
+
+}
+
+.mode-playvideo h2 {
+    width: 100%;
+    padding: 0 5%;
+}
+
+.mode-video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+.mode-video-img {
+    cursor: pointer;
+    object-fit: cover;
+    position: relative;
+}
+
+
+.open-popup-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    z-index: 11;
+}
+
+
+.mode-video-img img {
+    width: 100%;
+}
+
+.mode-popup-container {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-video {
+    width: 90%;
+    height: 85%;
+}
+
+.close-videobtn {
+    position: absolute;
+    top: 28px;
+    right: 4.5%;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+}
+
+.close-videobtn img {
+    filter: invert();
+    width: 20px;
+}
+
+
+/* mode-insta */
+
+.mode-insta {
+    position: relative;
+    z-index: 12;
+    height: 400px;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1000px) {
+
+    .mode-insta {
+        height: 450px;
+        
+    }
+}
+
+.insta-gray {
+    font-size: 0.4em;
+    margin-left: 5px;
+    color: rgb(148, 148, 148);
+}
+
+.best-insta-slide img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.custom-arrow03 {
+    margin-top: 23px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 11;
+    top: 0%;
+    right: 6%;
+}
+
+@media screen and (min-width: 1366px) {
+
+.custom-arrow03 {
+    display: none;
+}
+
+}
+
+.custom-arrow03 img {
+    width: 35px;
+}
+
+.best-prev {
+    margin-right: 55px;
+}
+
+
+.mode-insta .slick-slide {
+    margin: 0 5px;
+}
+
+/* 이미지 위에 마우스 호버 시 블러 처리 및 아이콘 표시 */
+.best-insta-slide .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.best-insta-slide .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+    border-radius: 10px;
+}
+
+.best-insta-slide:hover .overlay {
+    opacity: 1;
+}
+
+.best-insta-slide .overlay i {
+    color: white;
+    font-size: 3em;
+}
+
+.topButton {
+    width: 100%;
+    height: 100px;
+    padding: 0 5%;
+    text-align: right;
+    position: absolute;
+    bottom: -10%;
+}
+
+
+
+#bottomButton {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 15px 12px;
+    cursor: pointer;
+}
+
+/* footer start */
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 60px 5%;
+    padding-top: 80px;
+
+}
+
+footer p {
+    font-weight: lighter;
+    color: #c0c0c0;
+}
+
+.footer-mainIcon img {
+    width: 170px;
+}
+
+.footer-02 {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+}
+
+.footer-02 p {
+    margin-right: 15px;
+}
+
+.footer-03 {
+    padding: 20px 0;
+}
+
+.footer-04 {
+    margin-bottom: 40px;
+}
+
+.footer-subIcon {
+    width: 100%;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.footer-subIcon img {
+    width: 20px;
+    margin-right: 15px;
+}
+
