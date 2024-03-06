@@ -1882,6 +1882,7 @@ footer {
 footer p {
     font-weight: lighter;
     color: #c0c0c0;
+    font-size: 0.95em;
 }
 
 .footer-mainIcon img {
@@ -1890,7 +1891,7 @@ footer p {
 
 .footer-02 {
     width: 100%;
-    padding-top: 20px;
+    padding-top: 30px;
     display: flex;
 }
 
@@ -1899,11 +1900,11 @@ footer p {
 }
 
 .footer-03 {
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 .footer-04 {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .footer-subIcon {
