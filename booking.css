@@ -281,17 +281,7 @@ a {
 
 /* 라이브러리 끝 */
 
-
-/* pc 헤더 */
-
-
-
-
-
-
-
-
-/* 모바일 헤더 */
+/* 헤더 시작 */
 
 /* 헤더 열었을 때 y스크롤 없도록 */
 html.m-menu-scroll,
@@ -1369,6 +1359,7 @@ footer p {
 /*B-main start */
 
 /*B-main 시작 */
+
 .B-main {
     width: 100%;
     padding: 0 15%;
@@ -1441,7 +1432,6 @@ footer p {
 }
 
 
-
 .B-main-txt>:nth-child(3) .gray {
     font-weight: lighter;
     margin-bottom: 30px;
@@ -1451,15 +1441,12 @@ footer p {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
-
 }
 
 .B-main-txt>:nth-child(3) div span {
     font-size: 1.5em;
     margin-right: 5px;
 }
-
-
 
 .b-button {
     border: 1px solid black;
@@ -1476,8 +1463,6 @@ footer p {
 .B-main-txt>:nth-child(3) .b-button i {
     margin-left: 10px;
 }
-
-
 
 .B-main-txt>:nth-child(4) {
     display: flex;
@@ -1528,8 +1513,6 @@ footer p {
 /* B-sub */
 
 
-
-
 .B-sub * {
     box-sizing: border-box;
 }
@@ -1545,10 +1528,7 @@ footer p {
     width: 67%;
     flex-grow: 1;
     margin-right: 3%;
-
 }
-
-
 
 
 .mainsch-table {
@@ -1607,8 +1587,6 @@ footer p {
 .accordion {
     width: 100%;
     margin: 30px auto;
-    
-
 }
 
 .accordion-item {
@@ -1932,6 +1910,7 @@ footer p {
 }
 
 @media (max-width: 800px) {
+
     .B-main {
         padding: 0 4%;
         margin-bottom: 100px;
@@ -1952,7 +1931,6 @@ footer p {
         width: 100%;
         border-radius: 10px;
         margin-bottom: 30px;
-
     }
 
     .B-main-img {
@@ -1966,11 +1944,7 @@ footer p {
 
     .B-main-txt-icon img {
         width: 20px;
-
     }
-
-
-
 
 
     .B-sub-container {
@@ -1984,7 +1958,6 @@ footer p {
         width: 100%;
         flex-grow: 1;
         margin-right: 3%;
-
     }
 
     .B-sub-container .B-sub-right {
@@ -1992,8 +1965,6 @@ footer p {
         position: static;
         height: auto;
     }
-
-
 
     .B-sub-right {
         width: 100%;
@@ -2015,7 +1986,6 @@ footer p {
         text-align: right;
     }
 
-
     .big-underline {
         padding: 4%;
         width: 100%;
@@ -2024,7 +1994,5 @@ footer p {
     .big-underline03 {
         padding: 0;
     }
-
-
 
 }

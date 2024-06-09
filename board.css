@@ -235,29 +235,6 @@ section {
   cursor: pointer;
 }
 
-/* 한글 기본폰트 */
-
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'modetourb';
-    src: url('./font/MODETOURB.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'modetourR';
-    src: url('./font/MODETOURR.woff') format('woff');
-}
-
-html {
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
-
 
 /* 노말라이즈 */
 
@@ -503,40 +480,6 @@ a {
 .block {
     display: block;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* 한글 기본폰트 */
-
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'modetourb';
-  src: url('./font/MODETOURB.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'modetourR';
-  src: url('./font/MODETOURR.woff') format('woff');
-}
-
-html {
-  font-family: 'Noto Sans KR', sans-serif;
-}
-
 
 
 

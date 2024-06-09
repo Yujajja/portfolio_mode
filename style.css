@@ -193,8 +193,6 @@ a {
 }
 
 
-
-
 .bold {
     font-weight: 900;
 }
@@ -269,17 +267,7 @@ a {
 
 /* 라이브러리 끝 */
 
-
-/* pc 헤더 */
-
-
-
-
-
-
-
-
-/* 모바일 헤더 */
+/* 헤더 시작 */
 
 /* 헤더 열었을 때 y스크롤 없도록 */
 html.m-menu-scroll,
@@ -313,15 +301,12 @@ html.m-menu-scroll>body {
 }
 
 
-
-
 .m-header>.logo {
     width: 160px;
     display: inline-block;
     padding-top: 8px;
 
 }
-
 
 
 .m-header>.search {
@@ -488,7 +473,6 @@ html.m-menu-scroll>body {
 }
 
 
-
 .list-icon {
     text-align: left;
     display: flex;
@@ -539,8 +523,6 @@ html.m-menu-scroll>body {
     position: relative;
     padding-bottom: 100px;
 }
-
-
 
 
 .m-header>.m-menu-list>ul>li {
@@ -645,9 +627,6 @@ html.m-menu-scroll>body {
 }
 
 
-
-
-
 .list-fonticon {
     position: absolute;
     bottom: 2%;
@@ -702,7 +681,6 @@ html.m-menu-scroll>body {
 .m-header>.m-search-on>.m-search-box {
     position: relative;
 }
-
 
 
 .m-search-b {

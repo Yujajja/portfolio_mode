@@ -1,56 +1,5 @@
-/* 한글 기본폰트 */
-
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'modetourb';
-    src: url('./font/MODETOURB.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'modetourR';
-    src: url('./font/MODETOURR.woff') format('woff');
-}
-
-html {
-    font-family: 'Pretendard-Regular';
-}
 
 
-
-
-/* 노말라이즈 */
-
-body::-webkit-scrollbar {
-    width: 8px;
-}
-
-@media (min-width:1200px) {
-    body::-webkit-scrollbar {
-        width: 12px;
-    }
-}
-
-
-body::-webkit-scrollbar-thumb {
-    height: 20%;
-    background: rgba(45, 134, 112, 0.74);
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background: #009c75;
-
-}
-
-body::-webkit-scrollbar-track {
-    background: rgba(139, 139, 139, 0.123);
-}
 
 body {
     word-break: keep-all;
